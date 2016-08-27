@@ -1,0 +1,186 @@
+# Logfile created on 2016-08-27 17:44:57 +0530 by logger.rb/47272
+[2016-08-27 17:44:57 +0530 sai-HP-Pavilion-Notebook (8911)] INFO : Starting the New Relic agent in "development" environment.
+[2016-08-27 17:44:57 +0530 sai-HP-Pavilion-Notebook (8911)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2016-08-27 17:44:57 +0530 sai-HP-Pavilion-Notebook (8911)] INFO : Reading configuration from config/newrelic.yml (/home/sai/SAI/MY_PROJECTS/spree_demo)
+[2016-08-27 17:44:57 +0530 sai-HP-Pavilion-Notebook (8911)] INFO : New Relic Agent Developer Mode enabled.
+[2016-08-27 17:44:57 +0530 sai-HP-Pavilion-Notebook (8911)] ERROR : No application name configured.
+[2016-08-27 17:44:57 +0530 sai-HP-Pavilion-Notebook (8911)] ERROR : The Agent cannot start without at least one. Please check your 
+[2016-08-27 17:44:57 +0530 sai-HP-Pavilion-Notebook (8911)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
+[2016-08-27 17:44:57 +0530 sai-HP-Pavilion-Notebook (8911)] ERROR : value set for app_name in the development 
+[2016-08-27 17:44:57 +0530 sai-HP-Pavilion-Notebook (8911)] ERROR : environment.
+[2016-08-27 17:44:58 +0530 sai-HP-Pavilion-Notebook (8911)] INFO : Installing Sidekiq instrumentation
+[2016-08-27 17:44:58 +0530 sai-HP-Pavilion-Notebook (8911)] INFO : Installing Rails 3+ middleware instrumentation
+[2016-08-27 17:44:58 +0530 sai-HP-Pavilion-Notebook (8911)] INFO : Installing Redis Instrumentation
+[2016-08-27 17:44:58 +0530 sai-HP-Pavilion-Notebook (8911)] INFO : Installing deferred Rack::Builder instrumentation
+[2016-08-27 17:44:58 +0530 sai-HP-Pavilion-Notebook (8911)] INFO : Installing Rack::Builder middleware instrumentation
+[2016-08-27 17:44:58 +0530 sai-HP-Pavilion-Notebook (8911)] INFO : Installing deferred Puma::Rack::Builder instrumentation
+[2016-08-27 17:44:58 +0530 sai-HP-Pavilion-Notebook (8911)] INFO : Installing Puma::Rack::Builder middleware instrumentation
+[2016-08-27 17:44:58 +0530 sai-HP-Pavilion-Notebook (8911)] INFO : Installing Net instrumentation
+[2016-08-27 17:44:58 +0530 sai-HP-Pavilion-Notebook (8911)] INFO : Installing middleware-based Excon instrumentation
+[2016-08-27 17:44:58 +0530 sai-HP-Pavilion-Notebook (8911)] INFO : Installing ActiveJob instrumentation
+[2016-08-27 17:44:58 +0530 sai-HP-Pavilion-Notebook (8911)] INFO : Installing Memcache instrumentation for dalli gem
+[2016-08-27 17:44:58 +0530 sai-HP-Pavilion-Notebook (8911)] INFO : Installing ActiveMerchant instrumentation
+[2016-08-27 17:44:58 +0530 sai-HP-Pavilion-Notebook (8911)] INFO : Installing ActiveRecord 4+ instrumentation
+[2016-08-27 17:44:58 +0530 sai-HP-Pavilion-Notebook (8911)] INFO : Installing Rails 4 view instrumentation
+[2016-08-27 17:44:58 +0530 sai-HP-Pavilion-Notebook (8911)] INFO : Installing Rails 4 Controller instrumentation
+[2016-08-27 17:44:58 +0530 sai-HP-Pavilion-Notebook (8911)] INFO : Installing Rails 4 Error instrumentation
+[2016-08-27 17:44:58 +0530 sai-HP-Pavilion-Notebook (8911)] INFO : Finished instrumentation
+[2016-08-27 17:45:05 +0530 sai-HP-Pavilion-Notebook (8924)] INFO : Starting the New Relic agent in "development" environment.
+[2016-08-27 17:45:05 +0530 sai-HP-Pavilion-Notebook (8924)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2016-08-27 17:45:05 +0530 sai-HP-Pavilion-Notebook (8924)] INFO : Reading configuration from config/newrelic.yml (/home/sai/SAI/MY_PROJECTS/spree_demo)
+[2016-08-27 17:45:05 +0530 sai-HP-Pavilion-Notebook (8924)] INFO : New Relic Agent Developer Mode enabled.
+[2016-08-27 17:45:05 +0530 sai-HP-Pavilion-Notebook (8924)] ERROR : No application name configured.
+[2016-08-27 17:45:05 +0530 sai-HP-Pavilion-Notebook (8924)] ERROR : The Agent cannot start without at least one. Please check your 
+[2016-08-27 17:45:05 +0530 sai-HP-Pavilion-Notebook (8924)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
+[2016-08-27 17:45:05 +0530 sai-HP-Pavilion-Notebook (8924)] ERROR : value set for app_name in the development 
+[2016-08-27 17:45:05 +0530 sai-HP-Pavilion-Notebook (8924)] ERROR : environment.
+[2016-08-27 17:45:05 +0530 sai-HP-Pavilion-Notebook (8924)] INFO : Installing Sidekiq instrumentation
+[2016-08-27 17:45:05 +0530 sai-HP-Pavilion-Notebook (8924)] INFO : Installing Rails 3+ middleware instrumentation
+[2016-08-27 17:45:05 +0530 sai-HP-Pavilion-Notebook (8924)] INFO : Installing Redis Instrumentation
+[2016-08-27 17:45:05 +0530 sai-HP-Pavilion-Notebook (8924)] INFO : Installing deferred Rack::Builder instrumentation
+[2016-08-27 17:45:05 +0530 sai-HP-Pavilion-Notebook (8924)] INFO : Installing Rack::Builder middleware instrumentation
+[2016-08-27 17:45:05 +0530 sai-HP-Pavilion-Notebook (8924)] INFO : Installing deferred Puma::Rack::Builder instrumentation
+[2016-08-27 17:45:05 +0530 sai-HP-Pavilion-Notebook (8924)] INFO : Installing Puma::Rack::Builder middleware instrumentation
+[2016-08-27 17:45:05 +0530 sai-HP-Pavilion-Notebook (8924)] INFO : Installing Net instrumentation
+[2016-08-27 17:45:05 +0530 sai-HP-Pavilion-Notebook (8924)] INFO : Installing middleware-based Excon instrumentation
+[2016-08-27 17:45:05 +0530 sai-HP-Pavilion-Notebook (8924)] INFO : Installing ActiveJob instrumentation
+[2016-08-27 17:45:05 +0530 sai-HP-Pavilion-Notebook (8924)] INFO : Installing Memcache instrumentation for dalli gem
+[2016-08-27 17:45:05 +0530 sai-HP-Pavilion-Notebook (8924)] INFO : Installing ActiveMerchant instrumentation
+[2016-08-27 17:45:05 +0530 sai-HP-Pavilion-Notebook (8924)] INFO : Installing ActiveRecord 4+ instrumentation
+[2016-08-27 17:45:05 +0530 sai-HP-Pavilion-Notebook (8924)] INFO : Installing Rails 4 view instrumentation
+[2016-08-27 17:45:05 +0530 sai-HP-Pavilion-Notebook (8924)] INFO : Installing Rails 4 Controller instrumentation
+[2016-08-27 17:45:05 +0530 sai-HP-Pavilion-Notebook (8924)] INFO : Installing Rails 4 Error instrumentation
+[2016-08-27 17:45:05 +0530 sai-HP-Pavilion-Notebook (8924)] INFO : Finished instrumentation
+[2016-08-27 17:47:52 +0530 sai-HP-Pavilion-Notebook (9058)] INFO : Starting the New Relic agent in "development" environment.
+[2016-08-27 17:47:52 +0530 sai-HP-Pavilion-Notebook (9058)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2016-08-27 17:47:52 +0530 sai-HP-Pavilion-Notebook (9058)] INFO : Reading configuration from config/newrelic.yml (/home/sai/SAI/MY_PROJECTS/spree_demo)
+[2016-08-27 17:47:52 +0530 sai-HP-Pavilion-Notebook (9058)] INFO : New Relic Agent Developer Mode enabled.
+[2016-08-27 17:47:52 +0530 sai-HP-Pavilion-Notebook (9058)] ERROR : No application name configured.
+[2016-08-27 17:47:52 +0530 sai-HP-Pavilion-Notebook (9058)] ERROR : The Agent cannot start without at least one. Please check your 
+[2016-08-27 17:47:52 +0530 sai-HP-Pavilion-Notebook (9058)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
+[2016-08-27 17:47:52 +0530 sai-HP-Pavilion-Notebook (9058)] ERROR : value set for app_name in the development 
+[2016-08-27 17:47:52 +0530 sai-HP-Pavilion-Notebook (9058)] ERROR : environment.
+[2016-08-27 17:47:52 +0530 sai-HP-Pavilion-Notebook (9058)] INFO : Installing Sidekiq instrumentation
+[2016-08-27 17:47:52 +0530 sai-HP-Pavilion-Notebook (9058)] INFO : Installing Rails 3+ middleware instrumentation
+[2016-08-27 17:47:52 +0530 sai-HP-Pavilion-Notebook (9058)] INFO : Installing Redis Instrumentation
+[2016-08-27 17:47:52 +0530 sai-HP-Pavilion-Notebook (9058)] INFO : Installing deferred Rack::Builder instrumentation
+[2016-08-27 17:47:52 +0530 sai-HP-Pavilion-Notebook (9058)] INFO : Installing Rack::Builder middleware instrumentation
+[2016-08-27 17:47:52 +0530 sai-HP-Pavilion-Notebook (9058)] INFO : Installing deferred Puma::Rack::Builder instrumentation
+[2016-08-27 17:47:52 +0530 sai-HP-Pavilion-Notebook (9058)] INFO : Installing Puma::Rack::Builder middleware instrumentation
+[2016-08-27 17:47:52 +0530 sai-HP-Pavilion-Notebook (9058)] INFO : Installing Net instrumentation
+[2016-08-27 17:47:52 +0530 sai-HP-Pavilion-Notebook (9058)] INFO : Installing middleware-based Excon instrumentation
+[2016-08-27 17:47:52 +0530 sai-HP-Pavilion-Notebook (9058)] INFO : Installing ActiveJob instrumentation
+[2016-08-27 17:47:52 +0530 sai-HP-Pavilion-Notebook (9058)] INFO : Installing Memcache instrumentation for dalli gem
+[2016-08-27 17:47:52 +0530 sai-HP-Pavilion-Notebook (9058)] INFO : Installing ActiveMerchant instrumentation
+[2016-08-27 17:47:52 +0530 sai-HP-Pavilion-Notebook (9058)] INFO : Installing ActiveRecord 4+ instrumentation
+[2016-08-27 17:47:52 +0530 sai-HP-Pavilion-Notebook (9058)] INFO : Installing Rails 4 view instrumentation
+[2016-08-27 17:47:52 +0530 sai-HP-Pavilion-Notebook (9058)] INFO : Installing Rails 4 Controller instrumentation
+[2016-08-27 17:47:52 +0530 sai-HP-Pavilion-Notebook (9058)] INFO : Installing Rails 4 Error instrumentation
+[2016-08-27 17:47:52 +0530 sai-HP-Pavilion-Notebook (9058)] INFO : Finished instrumentation
+[2016-08-27 17:48:37 +0530 sai-HP-Pavilion-Notebook (11312)] INFO : Starting the New Relic agent in "development" environment.
+[2016-08-27 17:48:37 +0530 sai-HP-Pavilion-Notebook (11312)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2016-08-27 17:48:37 +0530 sai-HP-Pavilion-Notebook (11312)] INFO : Reading configuration from config/newrelic.yml (/home/sai/SAI/MY_PROJECTS/spree_demo)
+[2016-08-27 17:48:38 +0530 sai-HP-Pavilion-Notebook (11312)] INFO : New Relic Agent Developer Mode enabled.
+[2016-08-27 17:48:38 +0530 sai-HP-Pavilion-Notebook (11312)] ERROR : No application name configured.
+[2016-08-27 17:48:38 +0530 sai-HP-Pavilion-Notebook (11312)] ERROR : The Agent cannot start without at least one. Please check your 
+[2016-08-27 17:48:38 +0530 sai-HP-Pavilion-Notebook (11312)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
+[2016-08-27 17:48:38 +0530 sai-HP-Pavilion-Notebook (11312)] ERROR : value set for app_name in the development 
+[2016-08-27 17:48:38 +0530 sai-HP-Pavilion-Notebook (11312)] ERROR : environment.
+[2016-08-27 17:48:38 +0530 sai-HP-Pavilion-Notebook (11312)] INFO : Installing Sidekiq instrumentation
+[2016-08-27 17:48:38 +0530 sai-HP-Pavilion-Notebook (11312)] INFO : Installing Rails 3+ middleware instrumentation
+[2016-08-27 17:48:38 +0530 sai-HP-Pavilion-Notebook (11312)] INFO : Installing Redis Instrumentation
+[2016-08-27 17:48:38 +0530 sai-HP-Pavilion-Notebook (11312)] INFO : Installing deferred Rack::Builder instrumentation
+[2016-08-27 17:48:38 +0530 sai-HP-Pavilion-Notebook (11312)] INFO : Installing Rack::Builder middleware instrumentation
+[2016-08-27 17:48:38 +0530 sai-HP-Pavilion-Notebook (11312)] INFO : Installing deferred Puma::Rack::Builder instrumentation
+[2016-08-27 17:48:38 +0530 sai-HP-Pavilion-Notebook (11312)] INFO : Installing Puma::Rack::Builder middleware instrumentation
+[2016-08-27 17:48:38 +0530 sai-HP-Pavilion-Notebook (11312)] INFO : Installing Net instrumentation
+[2016-08-27 17:48:38 +0530 sai-HP-Pavilion-Notebook (11312)] INFO : Installing middleware-based Excon instrumentation
+[2016-08-27 17:48:38 +0530 sai-HP-Pavilion-Notebook (11312)] INFO : Installing ActiveJob instrumentation
+[2016-08-27 17:48:38 +0530 sai-HP-Pavilion-Notebook (11312)] INFO : Installing Memcache instrumentation for dalli gem
+[2016-08-27 17:48:38 +0530 sai-HP-Pavilion-Notebook (11312)] INFO : Installing ActiveMerchant instrumentation
+[2016-08-27 17:48:38 +0530 sai-HP-Pavilion-Notebook (11312)] INFO : Installing ActiveRecord 4+ instrumentation
+[2016-08-27 17:48:38 +0530 sai-HP-Pavilion-Notebook (11312)] INFO : Installing Rails 4 view instrumentation
+[2016-08-27 17:48:38 +0530 sai-HP-Pavilion-Notebook (11312)] INFO : Installing Rails 4 Controller instrumentation
+[2016-08-27 17:48:38 +0530 sai-HP-Pavilion-Notebook (11312)] INFO : Installing Rails 4 Error instrumentation
+[2016-08-27 17:48:38 +0530 sai-HP-Pavilion-Notebook (11312)] INFO : Finished instrumentation
+[2016-08-27 17:48:39 +0530 sai-HP-Pavilion-Notebook (11312)] INFO : Doing deferred dependency-detection before Rack startup
+[2016-08-27 18:11:48 +0530 sai-HP-Pavilion-Notebook (11877)] INFO : Starting the New Relic agent in "development" environment.
+[2016-08-27 18:11:48 +0530 sai-HP-Pavilion-Notebook (11877)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2016-08-27 18:11:48 +0530 sai-HP-Pavilion-Notebook (11877)] INFO : Reading configuration from config/newrelic.yml (/home/sai/SAI/MY_PROJECTS/huliogash)
+[2016-08-27 18:11:48 +0530 sai-HP-Pavilion-Notebook (11877)] INFO : New Relic Agent Developer Mode enabled.
+[2016-08-27 18:11:48 +0530 sai-HP-Pavilion-Notebook (11877)] ERROR : No application name configured.
+[2016-08-27 18:11:48 +0530 sai-HP-Pavilion-Notebook (11877)] ERROR : The Agent cannot start without at least one. Please check your 
+[2016-08-27 18:11:48 +0530 sai-HP-Pavilion-Notebook (11877)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
+[2016-08-27 18:11:48 +0530 sai-HP-Pavilion-Notebook (11877)] ERROR : value set for app_name in the development 
+[2016-08-27 18:11:48 +0530 sai-HP-Pavilion-Notebook (11877)] ERROR : environment.
+[2016-08-27 18:11:48 +0530 sai-HP-Pavilion-Notebook (11877)] INFO : Installing Sidekiq instrumentation
+[2016-08-27 18:11:48 +0530 sai-HP-Pavilion-Notebook (11877)] INFO : Installing Rails 3+ middleware instrumentation
+[2016-08-27 18:11:48 +0530 sai-HP-Pavilion-Notebook (11877)] INFO : Installing Redis Instrumentation
+[2016-08-27 18:11:48 +0530 sai-HP-Pavilion-Notebook (11877)] INFO : Installing deferred Rack::Builder instrumentation
+[2016-08-27 18:11:48 +0530 sai-HP-Pavilion-Notebook (11877)] INFO : Installing Rack::Builder middleware instrumentation
+[2016-08-27 18:11:48 +0530 sai-HP-Pavilion-Notebook (11877)] INFO : Installing deferred Puma::Rack::Builder instrumentation
+[2016-08-27 18:11:48 +0530 sai-HP-Pavilion-Notebook (11877)] INFO : Installing Puma::Rack::Builder middleware instrumentation
+[2016-08-27 18:11:48 +0530 sai-HP-Pavilion-Notebook (11877)] INFO : Installing Net instrumentation
+[2016-08-27 18:11:48 +0530 sai-HP-Pavilion-Notebook (11877)] INFO : Installing middleware-based Excon instrumentation
+[2016-08-27 18:11:48 +0530 sai-HP-Pavilion-Notebook (11877)] INFO : Installing ActiveJob instrumentation
+[2016-08-27 18:11:48 +0530 sai-HP-Pavilion-Notebook (11877)] INFO : Installing Memcache instrumentation for dalli gem
+[2016-08-27 18:11:48 +0530 sai-HP-Pavilion-Notebook (11877)] INFO : Installing ActiveMerchant instrumentation
+[2016-08-27 18:11:48 +0530 sai-HP-Pavilion-Notebook (11877)] INFO : Installing ActiveRecord 4+ instrumentation
+[2016-08-27 18:11:48 +0530 sai-HP-Pavilion-Notebook (11877)] INFO : Installing Rails 4 view instrumentation
+[2016-08-27 18:11:48 +0530 sai-HP-Pavilion-Notebook (11877)] INFO : Installing Rails 4 Controller instrumentation
+[2016-08-27 18:11:48 +0530 sai-HP-Pavilion-Notebook (11877)] INFO : Installing Rails 4 Error instrumentation
+[2016-08-27 18:11:48 +0530 sai-HP-Pavilion-Notebook (11877)] INFO : Finished instrumentation
+[2016-08-27 18:11:49 +0530 sai-HP-Pavilion-Notebook (11877)] INFO : Doing deferred dependency-detection before Rack startup
+[2016-08-27 18:14:49 +0530 sai-HP-Pavilion-Notebook (12013)] INFO : Starting the New Relic agent in "development" environment.
+[2016-08-27 18:14:49 +0530 sai-HP-Pavilion-Notebook (12013)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2016-08-27 18:14:49 +0530 sai-HP-Pavilion-Notebook (12013)] INFO : Reading configuration from config/newrelic.yml (/home/sai/SAI/MY_PROJECTS/huliogash)
+[2016-08-27 18:14:49 +0530 sai-HP-Pavilion-Notebook (12013)] INFO : New Relic Agent Developer Mode enabled.
+[2016-08-27 18:14:49 +0530 sai-HP-Pavilion-Notebook (12013)] ERROR : No application name configured.
+[2016-08-27 18:14:49 +0530 sai-HP-Pavilion-Notebook (12013)] ERROR : The Agent cannot start without at least one. Please check your 
+[2016-08-27 18:14:49 +0530 sai-HP-Pavilion-Notebook (12013)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
+[2016-08-27 18:14:49 +0530 sai-HP-Pavilion-Notebook (12013)] ERROR : value set for app_name in the development 
+[2016-08-27 18:14:49 +0530 sai-HP-Pavilion-Notebook (12013)] ERROR : environment.
+[2016-08-27 18:14:49 +0530 sai-HP-Pavilion-Notebook (12013)] INFO : Installing Sidekiq instrumentation
+[2016-08-27 18:14:49 +0530 sai-HP-Pavilion-Notebook (12013)] INFO : Installing Rails 3+ middleware instrumentation
+[2016-08-27 18:14:49 +0530 sai-HP-Pavilion-Notebook (12013)] INFO : Installing Redis Instrumentation
+[2016-08-27 18:14:49 +0530 sai-HP-Pavilion-Notebook (12013)] INFO : Installing deferred Rack::Builder instrumentation
+[2016-08-27 18:14:49 +0530 sai-HP-Pavilion-Notebook (12013)] INFO : Installing Rack::Builder middleware instrumentation
+[2016-08-27 18:14:49 +0530 sai-HP-Pavilion-Notebook (12013)] INFO : Installing deferred Puma::Rack::Builder instrumentation
+[2016-08-27 18:14:49 +0530 sai-HP-Pavilion-Notebook (12013)] INFO : Installing Puma::Rack::Builder middleware instrumentation
+[2016-08-27 18:14:49 +0530 sai-HP-Pavilion-Notebook (12013)] INFO : Installing Net instrumentation
+[2016-08-27 18:14:49 +0530 sai-HP-Pavilion-Notebook (12013)] INFO : Installing middleware-based Excon instrumentation
+[2016-08-27 18:14:49 +0530 sai-HP-Pavilion-Notebook (12013)] INFO : Installing ActiveJob instrumentation
+[2016-08-27 18:14:49 +0530 sai-HP-Pavilion-Notebook (12013)] INFO : Installing Memcache instrumentation for dalli gem
+[2016-08-27 18:14:49 +0530 sai-HP-Pavilion-Notebook (12013)] INFO : Installing ActiveMerchant instrumentation
+[2016-08-27 18:14:49 +0530 sai-HP-Pavilion-Notebook (12013)] INFO : Installing ActiveRecord 4+ instrumentation
+[2016-08-27 18:14:49 +0530 sai-HP-Pavilion-Notebook (12013)] INFO : Installing Rails 4 view instrumentation
+[2016-08-27 18:14:49 +0530 sai-HP-Pavilion-Notebook (12013)] INFO : Installing Rails 4 Controller instrumentation
+[2016-08-27 18:14:49 +0530 sai-HP-Pavilion-Notebook (12013)] INFO : Installing Rails 4 Error instrumentation
+[2016-08-27 18:14:49 +0530 sai-HP-Pavilion-Notebook (12013)] INFO : Finished instrumentation
+[2016-08-27 18:15:29 +0530 sai-HP-Pavilion-Notebook (12034)] INFO : Starting the New Relic agent in "development" environment.
+[2016-08-27 18:15:29 +0530 sai-HP-Pavilion-Notebook (12034)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2016-08-27 18:15:29 +0530 sai-HP-Pavilion-Notebook (12034)] INFO : Reading configuration from config/newrelic.yml (/home/sai/SAI/MY_PROJECTS/huliogash)
+[2016-08-27 18:15:29 +0530 sai-HP-Pavilion-Notebook (12034)] INFO : New Relic Agent Developer Mode enabled.
+[2016-08-27 18:15:29 +0530 sai-HP-Pavilion-Notebook (12034)] ERROR : No application name configured.
+[2016-08-27 18:15:29 +0530 sai-HP-Pavilion-Notebook (12034)] ERROR : The Agent cannot start without at least one. Please check your 
+[2016-08-27 18:15:29 +0530 sai-HP-Pavilion-Notebook (12034)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
+[2016-08-27 18:15:29 +0530 sai-HP-Pavilion-Notebook (12034)] ERROR : value set for app_name in the development 
+[2016-08-27 18:15:29 +0530 sai-HP-Pavilion-Notebook (12034)] ERROR : environment.
+[2016-08-27 18:15:29 +0530 sai-HP-Pavilion-Notebook (12034)] INFO : Installing Sidekiq instrumentation
+[2016-08-27 18:15:29 +0530 sai-HP-Pavilion-Notebook (12034)] INFO : Installing Rails 3+ middleware instrumentation
+[2016-08-27 18:15:29 +0530 sai-HP-Pavilion-Notebook (12034)] INFO : Installing Redis Instrumentation
+[2016-08-27 18:15:29 +0530 sai-HP-Pavilion-Notebook (12034)] INFO : Installing deferred Rack::Builder instrumentation
+[2016-08-27 18:15:29 +0530 sai-HP-Pavilion-Notebook (12034)] INFO : Installing Rack::Builder middleware instrumentation
+[2016-08-27 18:15:29 +0530 sai-HP-Pavilion-Notebook (12034)] INFO : Installing deferred Puma::Rack::Builder instrumentation
+[2016-08-27 18:15:29 +0530 sai-HP-Pavilion-Notebook (12034)] INFO : Installing Puma::Rack::Builder middleware instrumentation
+[2016-08-27 18:15:29 +0530 sai-HP-Pavilion-Notebook (12034)] INFO : Installing Net instrumentation
+[2016-08-27 18:15:29 +0530 sai-HP-Pavilion-Notebook (12034)] INFO : Installing middleware-based Excon instrumentation
+[2016-08-27 18:15:29 +0530 sai-HP-Pavilion-Notebook (12034)] INFO : Installing ActiveJob instrumentation
+[2016-08-27 18:15:29 +0530 sai-HP-Pavilion-Notebook (12034)] INFO : Installing Memcache instrumentation for dalli gem
+[2016-08-27 18:15:29 +0530 sai-HP-Pavilion-Notebook (12034)] INFO : Installing ActiveMerchant instrumentation
+[2016-08-27 18:15:29 +0530 sai-HP-Pavilion-Notebook (12034)] INFO : Installing ActiveRecord 4+ instrumentation
+[2016-08-27 18:15:29 +0530 sai-HP-Pavilion-Notebook (12034)] INFO : Installing Rails 4 view instrumentation
+[2016-08-27 18:15:29 +0530 sai-HP-Pavilion-Notebook (12034)] INFO : Installing Rails 4 Controller instrumentation
+[2016-08-27 18:15:29 +0530 sai-HP-Pavilion-Notebook (12034)] INFO : Installing Rails 4 Error instrumentation
+[2016-08-27 18:15:29 +0530 sai-HP-Pavilion-Notebook (12034)] INFO : Finished instrumentation
+[2016-08-27 18:15:31 +0530 sai-HP-Pavilion-Notebook (12034)] INFO : Doing deferred dependency-detection before Rack startup
