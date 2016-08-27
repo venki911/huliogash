@@ -7,7 +7,7 @@
     <ignored path="huliogash.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="6e38f8c8-dc0b-4db7-82d5-b7e28ca1462d" time="1472318588869" ignored="false" />
-    <file path="/production.rb" changelist="6e38f8c8-dc0b-4db7-82d5-b7e28ca1462d" time="1472318641704" ignored="false" />
+    <file path="/production.rb" changelist="6e38f8c8-dc0b-4db7-82d5-b7e28ca1462d" time="1472318840869" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,7 +27,7 @@
       <file leaf-file-name="production.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="79" selection-start="1192" selection-end="1192" vertical-scroll-proportion="0.65746754">
+            <state line="89" column="54" selection-start="3592" selection-end="3592" vertical-scroll-proportion="0.53733766">
               <folding />
             </state>
           </provider>
@@ -352,7 +352,7 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="79" selection-start="1192" selection-end="1192" vertical-scroll-proportion="0.65746754">
+        <state line="89" column="54" selection-start="3592" selection-end="3592" vertical-scroll-proportion="0.53733766">
           <folding />
         </state>
       </provider>

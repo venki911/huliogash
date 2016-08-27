@@ -84,10 +84,10 @@ Rails.application.configure do
   end
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
-  config.action_controller.asset_host = config.action_mailer.asset_host = 'https://' + config.cdn
+  config.action_controller.asset_host = config.action_mailer.asset_host = "https://#{config.cdn}"
   routes.default_url_options[:host] = config.action_controller.asset_host
 
-  config.action_mailer.default_url_options = { host: 'https://' + config.domain }
+  config.action_mailer.default_url_options = { host: "https://#{config.domain}" }
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
