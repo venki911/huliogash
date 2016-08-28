@@ -1,0 +1,35 @@
+
+
+body{
+ font-family: 'Work Sans', sans-serif;
+}
+
+
+a{
+	color: #3586a7;
+}
+a:hover, a:focus{
+	color: #0c81b1;
+}
+#spree-header{
+	background: #FFF;
+	box-shadow: 0 1px 7px #F5F5F5;
+}
+#spree-header #header{
+	background: #FFF;
+	border-bottom: 1px solid #EEE;
+}
+.panel-default{
+	border-color: #F2F2F2;
+}
+.panel-default:hover{
+	-webkit-box-shadow: 0 0 50px 3px #f2f2f2;
+	box-shadow: 0 0 50px 3px #f2f2f2;
+}
+.panel-footer{
+	background-color: #FAFAFA;
+	border-top-color: #f2f2f2
+}
+.list-group-item{
+	border: 1px solid #F2F2F2;
+}
