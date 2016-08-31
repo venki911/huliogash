@@ -211,3 +211,30 @@
 [2016-08-31 09:14:55 +0530 sai-HP-Pavilion-Notebook (6158)] INFO : Installing Rails 4 Error instrumentation
 [2016-08-31 09:14:55 +0530 sai-HP-Pavilion-Notebook (6158)] INFO : Finished instrumentation
 [2016-08-31 09:14:58 +0530 sai-HP-Pavilion-Notebook (6158)] INFO : Doing deferred dependency-detection before Rack startup
+[2016-08-31 10:43:28 +0530 sai-HP-Pavilion-Notebook (10875)] INFO : Starting the New Relic agent in "development" environment.
+[2016-08-31 10:43:28 +0530 sai-HP-Pavilion-Notebook (10875)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2016-08-31 10:43:28 +0530 sai-HP-Pavilion-Notebook (10875)] INFO : Reading configuration from config/newrelic.yml (/home/sai/SAI/client/huliogash)
+[2016-08-31 10:43:28 +0530 sai-HP-Pavilion-Notebook (10875)] INFO : New Relic Agent Developer Mode enabled.
+[2016-08-31 10:43:28 +0530 sai-HP-Pavilion-Notebook (10875)] ERROR : No application name configured.
+[2016-08-31 10:43:28 +0530 sai-HP-Pavilion-Notebook (10875)] ERROR : The Agent cannot start without at least one. Please check your 
+[2016-08-31 10:43:28 +0530 sai-HP-Pavilion-Notebook (10875)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
+[2016-08-31 10:43:28 +0530 sai-HP-Pavilion-Notebook (10875)] ERROR : value set for app_name in the development 
+[2016-08-31 10:43:28 +0530 sai-HP-Pavilion-Notebook (10875)] ERROR : environment.
+[2016-08-31 10:43:28 +0530 sai-HP-Pavilion-Notebook (10875)] INFO : Installing Sidekiq instrumentation
+[2016-08-31 10:43:28 +0530 sai-HP-Pavilion-Notebook (10875)] INFO : Installing Rails 3+ middleware instrumentation
+[2016-08-31 10:43:28 +0530 sai-HP-Pavilion-Notebook (10875)] INFO : Installing Redis Instrumentation
+[2016-08-31 10:43:28 +0530 sai-HP-Pavilion-Notebook (10875)] INFO : Installing deferred Rack::Builder instrumentation
+[2016-08-31 10:43:28 +0530 sai-HP-Pavilion-Notebook (10875)] INFO : Installing Rack::Builder middleware instrumentation
+[2016-08-31 10:43:28 +0530 sai-HP-Pavilion-Notebook (10875)] INFO : Installing deferred Puma::Rack::Builder instrumentation
+[2016-08-31 10:43:28 +0530 sai-HP-Pavilion-Notebook (10875)] INFO : Installing Puma::Rack::Builder middleware instrumentation
+[2016-08-31 10:43:28 +0530 sai-HP-Pavilion-Notebook (10875)] INFO : Installing Net instrumentation
+[2016-08-31 10:43:28 +0530 sai-HP-Pavilion-Notebook (10875)] INFO : Installing middleware-based Excon instrumentation
+[2016-08-31 10:43:28 +0530 sai-HP-Pavilion-Notebook (10875)] INFO : Installing ActiveJob instrumentation
+[2016-08-31 10:43:28 +0530 sai-HP-Pavilion-Notebook (10875)] INFO : Installing Memcache instrumentation for dalli gem
+[2016-08-31 10:43:28 +0530 sai-HP-Pavilion-Notebook (10875)] INFO : Installing ActiveMerchant instrumentation
+[2016-08-31 10:43:28 +0530 sai-HP-Pavilion-Notebook (10875)] INFO : Installing ActiveRecord 4+ instrumentation
+[2016-08-31 10:43:28 +0530 sai-HP-Pavilion-Notebook (10875)] INFO : Installing Rails 4 view instrumentation
+[2016-08-31 10:43:28 +0530 sai-HP-Pavilion-Notebook (10875)] INFO : Installing Rails 4 Controller instrumentation
+[2016-08-31 10:43:28 +0530 sai-HP-Pavilion-Notebook (10875)] INFO : Installing Rails 4 Error instrumentation
+[2016-08-31 10:43:28 +0530 sai-HP-Pavilion-Notebook (10875)] INFO : Finished instrumentation
+[2016-08-31 10:43:29 +0530 sai-HP-Pavilion-Notebook (10875)] INFO : Doing deferred dependency-detection before Rack startup

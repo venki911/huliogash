@@ -12161,3 +12161,385 @@ Processing by Spree::StoreController#cart_link as */*
   Rendered spree/shared/_link_to_cart.html.erb (15.1ms)
   Couldn't find template for digesting: store/cart_link
 Completed 304 Not Modified in 33ms (Views: 19.5ms | ActiveRecord: 1.7ms)
+  [1m[36mSpree::Preference Load (0.5ms)[0m  [1mSELECT  "spree_preferences".* FROM "spree_preferences" WHERE "spree_preferences"."key" = $1  ORDER BY "spree_preferences"."id" ASC LIMIT 1[0m  [["key", "spree/app_configuration/logo"]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSpree::Preference Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "spree_preferences" WHERE ("spree_preferences"."key" = 'spree/app_configuration/logo' AND "spree_preferences"."id" != 3) LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mSpree::Preference Load (0.3ms)[0m  [1mSELECT  "spree_preferences".* FROM "spree_preferences" WHERE "spree_preferences"."key" = $1  ORDER BY "spree_preferences"."id" ASC LIMIT 1[0m  [["key", "spree/app_configuration/admin_interface_logo"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSpree::Preference Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "spree_preferences" WHERE ("spree_preferences"."key" = 'spree/app_configuration/admin_interface_logo' AND "spree_preferences"."id" != 4) LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+
+
+Started GET "/" for 127.0.0.1 at 2016-08-31 10:43:35 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Spree::HomeController#index as HTML
+  [1m[35mSpree::Order Exists (0.6ms)[0m  SELECT  1 AS one FROM "spree_orders" WHERE "spree_orders"."guest_token" = $1 LIMIT 1  [["guest_token", "3ItxTrHyN5ggbkiQEAlyQw1472620416219"]]
+  [1m[36mSpree::Preference Load (0.3ms)[0m  [1mSELECT  "spree_preferences".* FROM "spree_preferences" WHERE "spree_preferences"."key" = $1 LIMIT 1[0m  [["key", "spree/frontend_configuration/locale"]]
+  [1m[35mSpree::Taxonomy Load (1.3ms)[0m  SELECT "spree_taxonomies".* FROM "spree_taxonomies"  ORDER BY spree_taxonomies.position, spree_taxonomies.created_at
+  [1m[36mSpree::Taxon Load (0.7ms)[0m  [1mSELECT "spree_taxons".* FROM "spree_taxons" WHERE "spree_taxons"."parent_id" IS NULL AND "spree_taxons"."taxonomy_id" IN (1, 2)[0m
+  [1m[35mSpree::Taxon Load (0.5ms)[0m  SELECT "spree_taxons".* FROM "spree_taxons" WHERE "spree_taxons"."parent_id" IN (1, 2)  ORDER BY "spree_taxons"."lft"
+  Rendered /home/sai/.rvm/gems/ruby-2.2.4/bundler/gems/spree-5546b0b19043/frontend/app/views/spree/shared/_taxonomies.html.erb (171.5ms)
+  [1m[36m (2.3ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "spree_products" INNER JOIN "spree_variants" ON "spree_variants"."product_id" = "spree_products"."id" AND "spree_variants"."is_master" = $1 AND "spree_variants"."deleted_at" IS NULL INNER JOIN "spree_prices" ON "spree_prices"."variant_id" = "spree_variants"."id" AND "spree_prices"."deleted_at" IS NULL WHERE "spree_products"."deleted_at" IS NULL AND ("spree_products".deleted_at IS NULL or "spree_products".deleted_at >= '2016-08-31 05:13:36.309503') AND ("spree_products".available_on <= '2016-08-31 05:13:36.310183') AND (spree_prices.amount IS NOT NULL) AND "spree_prices"."currency" = 'USD' LIMIT 12 OFFSET 0) subquery_for_count[0m  [["is_master", "t"]]
+  [1m[35m (0.8ms)[0m  SELECT  MAX("spree_products"."updated_at") FROM "spree_products" INNER JOIN "spree_variants" ON "spree_variants"."product_id" = "spree_products"."id" AND "spree_variants"."is_master" = $1 AND "spree_variants"."deleted_at" IS NULL INNER JOIN "spree_prices" ON "spree_prices"."variant_id" = "spree_variants"."id" AND "spree_prices"."deleted_at" IS NULL WHERE "spree_products"."deleted_at" IS NULL AND ("spree_products".deleted_at IS NULL or "spree_products".deleted_at >= '2016-08-31 05:13:36.309503') AND ("spree_products".available_on <= '2016-08-31 05:13:36.310183') AND (spree_prices.amount IS NOT NULL) AND "spree_prices"."currency" = 'USD' LIMIT 12 OFFSET 0  [["is_master", "t"]]
+  [1m[36m (1.8ms)[0m  [1mSELECT COUNT(*) FROM "spree_products" INNER JOIN "spree_variants" ON "spree_variants"."product_id" = "spree_products"."id" AND "spree_variants"."is_master" = $1 AND "spree_variants"."deleted_at" IS NULL INNER JOIN "spree_prices" ON "spree_prices"."variant_id" = "spree_variants"."id" AND "spree_prices"."deleted_at" IS NULL WHERE "spree_products"."deleted_at" IS NULL AND ("spree_products".deleted_at IS NULL or "spree_products".deleted_at >= '2016-08-31 05:13:36.309503') AND ("spree_products".available_on <= '2016-08-31 05:13:36.310183') AND (spree_prices.amount IS NOT NULL) AND "spree_prices"."currency" = 'USD'[0m  [["is_master", "t"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "spree_products" INNER JOIN "spree_variants" ON "spree_variants"."product_id" = "spree_products"."id" AND "spree_variants"."is_master" = $1 AND "spree_variants"."deleted_at" IS NULL INNER JOIN "spree_prices" ON "spree_prices"."variant_id" = "spree_variants"."id" AND "spree_prices"."deleted_at" IS NULL WHERE "spree_products"."deleted_at" IS NULL AND ("spree_products".deleted_at IS NULL or "spree_products".deleted_at >= '2016-08-31 05:13:36.309503') AND ("spree_products".available_on <= '2016-08-31 05:13:36.310183') AND (spree_prices.amount IS NOT NULL) AND "spree_prices"."currency" = 'USD' LIMIT 12 OFFSET 0) subquery_for_count  [["is_master", true]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "spree_products" INNER JOIN "spree_variants" ON "spree_variants"."product_id" = "spree_products"."id" AND "spree_variants"."is_master" = $1 AND "spree_variants"."deleted_at" IS NULL INNER JOIN "spree_prices" ON "spree_prices"."variant_id" = "spree_variants"."id" AND "spree_prices"."deleted_at" IS NULL WHERE "spree_products"."deleted_at" IS NULL AND ("spree_products".deleted_at IS NULL or "spree_products".deleted_at >= '2016-08-31 05:13:36.309503') AND ("spree_products".available_on <= '2016-08-31 05:13:36.310183') AND (spree_prices.amount IS NOT NULL) AND "spree_prices"."currency" = 'USD' LIMIT 12 OFFSET 0) subquery_for_count[0m  [["is_master", true]]
+  [1m[35mSpree::Product Load (0.9ms)[0m  SELECT  "spree_products".* FROM "spree_products" INNER JOIN "spree_variants" ON "spree_variants"."product_id" = "spree_products"."id" AND "spree_variants"."is_master" = $1 AND "spree_variants"."deleted_at" IS NULL INNER JOIN "spree_prices" ON "spree_prices"."variant_id" = "spree_variants"."id" AND "spree_prices"."deleted_at" IS NULL WHERE "spree_products"."deleted_at" IS NULL AND ("spree_products".deleted_at IS NULL or "spree_products".deleted_at >= '2016-08-31 05:13:36.309503') AND ("spree_products".available_on <= '2016-08-31 05:13:36.310183') AND (spree_prices.amount IS NOT NULL) AND "spree_prices"."currency" = 'USD' LIMIT 12 OFFSET 0  [["is_master", "t"]]
+  [1m[36mSpree::Variant Load (0.7ms)[0m  [1mSELECT "spree_variants".* FROM "spree_variants" WHERE "spree_variants"."deleted_at" IS NULL AND "spree_variants"."is_master" = $1 AND "spree_variants"."product_id" IN (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12)[0m  [["is_master", "t"]]
+  [1m[35mSpree::Price Load (0.4ms)[0m  SELECT "spree_prices".* FROM "spree_prices" WHERE "spree_prices"."deleted_at" IS NULL AND "spree_prices"."variant_id" IN (1, 2, 3, 4, 5, 7, 6, 12, 11, 10, 9, 8)
+  [1m[36mSpree::Image Load (0.8ms)[0m  [1mSELECT "spree_assets".* FROM "spree_assets" WHERE "spree_assets"."type" IN ('Spree::Image') AND "spree_assets"."viewable_type" = 'Spree::Variant' AND "spree_assets"."viewable_id" IN (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12)  ORDER BY "spree_assets"."position" ASC[0m
+  Rendered /home/sai/.rvm/gems/ruby-2.2.4/bundler/gems/spree-5546b0b19043/frontend/app/views/spree/shared/_products.html.erb (221.3ms)
+  Rendered spree/home/index.html.erb within spree/layouts/spree_application (464.1ms)
+  [1m[35mSpree::Store Load (0.6ms)[0m  SELECT  "spree_stores".* FROM "spree_stores" WHERE (url like '%localhost%')  ORDER BY "spree_stores"."id" ASC LIMIT 1
+  [1m[36mSpree::Store Load (0.4ms)[0m  [1mSELECT  "spree_stores".* FROM "spree_stores" WHERE "spree_stores"."default" = $1  ORDER BY "spree_stores"."id" ASC LIMIT 1[0m  [["default", "t"]]
+  Rendered spree/shared/_head.html.erb (1675.8ms)
+Completed 500 Internal Server Error in 2319ms (ActiveRecord: 26.3ms)
+[Rollbar] Reporting exception: Missing partial spree/shared/_translations with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder, :rabl], :versions=>[:v1]}. Searched in:
+  * "/home/sai/SAI/client/huliogash/app/views"
+  * "/home/sai/.rvm/gems/ruby-2.2.4/bundler/gems/spree_auth_devise-4d1328c93fc5/lib/views/backend"
+  * "/home/sai/.rvm/gems/ruby-2.2.4/bundler/gems/spree_auth_devise-4d1328c93fc5/lib/views/frontend"
+  * "/home/sai/.rvm/gems/ruby-2.2.4/gems/devise-3.4.1/app/views"
+  * "/home/sai/.rvm/gems/ruby-2.2.4/bundler/gems/spree_gateway-59ac5bcacf94/lib/views/backend"
+  * "/home/sai/.rvm/gems/ruby-2.2.4/bundler/gems/spree_gateway-59ac5bcacf94/lib/views/frontend"
+  * "/home/sai/.rvm/gems/ruby-2.2.4/bundler/gems/spree-5546b0b19043/frontend/app/views"
+  * "/home/sai/.rvm/gems/ruby-2.2.4/bundler/gems/spree-5546b0b19043/backend/app/views"
+  * "/home/sai/.rvm/gems/ruby-2.2.4/bundler/gems/spree-5546b0b19043/api/app/views"
+  * "/home/sai/.rvm/gems/ruby-2.2.4/bundler/gems/spree-5546b0b19043/core/app/views"
+  * "/home/sai/.rvm/gems/ruby-2.2.4/gems/kaminari-0.16.3/app/views"
+
+[Rollbar] Exception not reported because Rollbar is disabled
+
+ActionView::Template::Error (Missing partial spree/shared/_translations with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder, :rabl], :versions=>[:v1]}. Searched in:
+  * "/home/sai/SAI/client/huliogash/app/views"
+  * "/home/sai/.rvm/gems/ruby-2.2.4/bundler/gems/spree_auth_devise-4d1328c93fc5/lib/views/backend"
+  * "/home/sai/.rvm/gems/ruby-2.2.4/bundler/gems/spree_auth_devise-4d1328c93fc5/lib/views/frontend"
+  * "/home/sai/.rvm/gems/ruby-2.2.4/gems/devise-3.4.1/app/views"
+  * "/home/sai/.rvm/gems/ruby-2.2.4/bundler/gems/spree_gateway-59ac5bcacf94/lib/views/backend"
+  * "/home/sai/.rvm/gems/ruby-2.2.4/bundler/gems/spree_gateway-59ac5bcacf94/lib/views/frontend"
+  * "/home/sai/.rvm/gems/ruby-2.2.4/bundler/gems/spree-5546b0b19043/frontend/app/views"
+  * "/home/sai/.rvm/gems/ruby-2.2.4/bundler/gems/spree-5546b0b19043/backend/app/views"
+  * "/home/sai/.rvm/gems/ruby-2.2.4/bundler/gems/spree-5546b0b19043/api/app/views"
+  * "/home/sai/.rvm/gems/ruby-2.2.4/bundler/gems/spree-5546b0b19043/core/app/views"
+  * "/home/sai/.rvm/gems/ruby-2.2.4/gems/kaminari-0.16.3/app/views"
+):
+    13:   <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6/html5shiv.min.js"></script>
+    14: <![endif]-->
+    15: <%= yield :head %>
+    16: <%= render 'spree/shared/translations' %>
+  app/views/spree/shared/_head.html.erb:16:in `_e6229fe123bf386ad0984ad9de896f40'
+  app/views/spree/layouts/spree_application.html.erb:8:in `_3043c48390035a6a3fbf7ccf784ecc94'
+
+
+  Rendered /home/sai/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (13.0ms)
+  Rendered /home/sai/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered /home/sai/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/sai/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (50.8ms)
+  Rendered /home/sai/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /home/sai/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/sai/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /home/sai/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.8ms)
+  Rendered /home/sai/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (32.8ms)
+  Rendered /home/sai/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (1.1ms)
+  Rendered /home/sai/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.9ms)
+  Rendered /home/sai/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (67.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-08-31 10:43:39 +0530
+Processing by Spree::HomeController#index as HTML
+  [1m[35mSpree::Order Exists (0.4ms)[0m  SELECT  1 AS one FROM "spree_orders" WHERE "spree_orders"."guest_token" = $1 LIMIT 1  [["guest_token", "x44TJ6HbH94ZbeRHrf482Q1472620419123"]]
+  [1m[36mSpree::Preference Load (0.3ms)[0m  [1mSELECT  "spree_preferences".* FROM "spree_preferences" WHERE "spree_preferences"."key" = $1 LIMIT 1[0m  [["key", "spree/frontend_configuration/locale"]]
+  [1m[35mSpree::Taxonomy Load (0.3ms)[0m  SELECT "spree_taxonomies".* FROM "spree_taxonomies"  ORDER BY spree_taxonomies.position, spree_taxonomies.created_at
+  [1m[36mSpree::Taxon Load (0.4ms)[0m  [1mSELECT "spree_taxons".* FROM "spree_taxons" WHERE "spree_taxons"."parent_id" IS NULL AND "spree_taxons"."taxonomy_id" IN (1, 2)[0m
+  [1m[35mSpree::Taxon Load (0.4ms)[0m  SELECT "spree_taxons".* FROM "spree_taxons" WHERE "spree_taxons"."parent_id" IN (1, 2)  ORDER BY "spree_taxons"."lft"
+  Rendered /home/sai/.rvm/gems/ruby-2.2.4/bundler/gems/spree-5546b0b19043/frontend/app/views/spree/shared/_taxonomies.html.erb (39.9ms)
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "spree_products" INNER JOIN "spree_variants" ON "spree_variants"."product_id" = "spree_products"."id" AND "spree_variants"."is_master" = $1 AND "spree_variants"."deleted_at" IS NULL INNER JOIN "spree_prices" ON "spree_prices"."variant_id" = "spree_variants"."id" AND "spree_prices"."deleted_at" IS NULL WHERE "spree_products"."deleted_at" IS NULL AND ("spree_products".deleted_at IS NULL or "spree_products".deleted_at >= '2016-08-31 05:13:39.129299') AND ("spree_products".available_on <= '2016-08-31 05:13:39.130140') AND (spree_prices.amount IS NOT NULL) AND "spree_prices"."currency" = 'USD' LIMIT 12 OFFSET 0) subquery_for_count[0m  [["is_master", "t"]]
+  [1m[35m (1.2ms)[0m  SELECT  MAX("spree_products"."updated_at") FROM "spree_products" INNER JOIN "spree_variants" ON "spree_variants"."product_id" = "spree_products"."id" AND "spree_variants"."is_master" = $1 AND "spree_variants"."deleted_at" IS NULL INNER JOIN "spree_prices" ON "spree_prices"."variant_id" = "spree_variants"."id" AND "spree_prices"."deleted_at" IS NULL WHERE "spree_products"."deleted_at" IS NULL AND ("spree_products".deleted_at IS NULL or "spree_products".deleted_at >= '2016-08-31 05:13:39.129299') AND ("spree_products".available_on <= '2016-08-31 05:13:39.130140') AND (spree_prices.amount IS NOT NULL) AND "spree_prices"."currency" = 'USD' LIMIT 12 OFFSET 0  [["is_master", "t"]]
+  [1m[36m (1.1ms)[0m  [1mSELECT COUNT(*) FROM "spree_products" INNER JOIN "spree_variants" ON "spree_variants"."product_id" = "spree_products"."id" AND "spree_variants"."is_master" = $1 AND "spree_variants"."deleted_at" IS NULL INNER JOIN "spree_prices" ON "spree_prices"."variant_id" = "spree_variants"."id" AND "spree_prices"."deleted_at" IS NULL WHERE "spree_products"."deleted_at" IS NULL AND ("spree_products".deleted_at IS NULL or "spree_products".deleted_at >= '2016-08-31 05:13:39.129299') AND ("spree_products".available_on <= '2016-08-31 05:13:39.130140') AND (spree_prices.amount IS NOT NULL) AND "spree_prices"."currency" = 'USD'[0m  [["is_master", "t"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "spree_products" INNER JOIN "spree_variants" ON "spree_variants"."product_id" = "spree_products"."id" AND "spree_variants"."is_master" = $1 AND "spree_variants"."deleted_at" IS NULL INNER JOIN "spree_prices" ON "spree_prices"."variant_id" = "spree_variants"."id" AND "spree_prices"."deleted_at" IS NULL WHERE "spree_products"."deleted_at" IS NULL AND ("spree_products".deleted_at IS NULL or "spree_products".deleted_at >= '2016-08-31 05:13:39.129299') AND ("spree_products".available_on <= '2016-08-31 05:13:39.130140') AND (spree_prices.amount IS NOT NULL) AND "spree_prices"."currency" = 'USD' LIMIT 12 OFFSET 0) subquery_for_count  [["is_master", true]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "spree_products" INNER JOIN "spree_variants" ON "spree_variants"."product_id" = "spree_products"."id" AND "spree_variants"."is_master" = $1 AND "spree_variants"."deleted_at" IS NULL INNER JOIN "spree_prices" ON "spree_prices"."variant_id" = "spree_variants"."id" AND "spree_prices"."deleted_at" IS NULL WHERE "spree_products"."deleted_at" IS NULL AND ("spree_products".deleted_at IS NULL or "spree_products".deleted_at >= '2016-08-31 05:13:39.129299') AND ("spree_products".available_on <= '2016-08-31 05:13:39.130140') AND (spree_prices.amount IS NOT NULL) AND "spree_prices"."currency" = 'USD' LIMIT 12 OFFSET 0) subquery_for_count[0m  [["is_master", true]]
+  [1m[35mSpree::Product Load (1.1ms)[0m  SELECT  "spree_products".* FROM "spree_products" INNER JOIN "spree_variants" ON "spree_variants"."product_id" = "spree_products"."id" AND "spree_variants"."is_master" = $1 AND "spree_variants"."deleted_at" IS NULL INNER JOIN "spree_prices" ON "spree_prices"."variant_id" = "spree_variants"."id" AND "spree_prices"."deleted_at" IS NULL WHERE "spree_products"."deleted_at" IS NULL AND ("spree_products".deleted_at IS NULL or "spree_products".deleted_at >= '2016-08-31 05:13:39.129299') AND ("spree_products".available_on <= '2016-08-31 05:13:39.130140') AND (spree_prices.amount IS NOT NULL) AND "spree_prices"."currency" = 'USD' LIMIT 12 OFFSET 0  [["is_master", "t"]]
+  [1m[36mSpree::Variant Load (0.8ms)[0m  [1mSELECT "spree_variants".* FROM "spree_variants" WHERE "spree_variants"."deleted_at" IS NULL AND "spree_variants"."is_master" = $1 AND "spree_variants"."product_id" IN (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12)[0m  [["is_master", "t"]]
+  [1m[35mSpree::Price Load (1.3ms)[0m  SELECT "spree_prices".* FROM "spree_prices" WHERE "spree_prices"."deleted_at" IS NULL AND "spree_prices"."variant_id" IN (1, 2, 3, 4, 5, 7, 6, 12, 11, 10, 9, 8)
+  [1m[36mSpree::Image Load (0.6ms)[0m  [1mSELECT "spree_assets".* FROM "spree_assets" WHERE "spree_assets"."type" IN ('Spree::Image') AND "spree_assets"."viewable_type" = 'Spree::Variant' AND "spree_assets"."viewable_id" IN (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12)  ORDER BY "spree_assets"."position" ASC[0m
+  Rendered /home/sai/.rvm/gems/ruby-2.2.4/bundler/gems/spree-5546b0b19043/frontend/app/views/spree/shared/_products.html.erb (190.3ms)
+  Rendered spree/home/index.html.erb within spree/layouts/spree_application (251.2ms)
+  [1m[35mSpree::Store Load (0.5ms)[0m  SELECT  "spree_stores".* FROM "spree_stores" WHERE (url like '%localhost%')  ORDER BY "spree_stores"."id" ASC LIMIT 1
+  [1m[36mSpree::Store Load (0.4ms)[0m  [1mSELECT  "spree_stores".* FROM "spree_stores" WHERE "spree_stores"."default" = $1  ORDER BY "spree_stores"."id" ASC LIMIT 1[0m  [["default", "t"]]
+  Rendered spree/shared/_head.html.erb (162.7ms)
+Completed 500 Internal Server Error in 431ms (ActiveRecord: 9.8ms)
+[Rollbar] Reporting exception: Missing partial spree/shared/_translations with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder, :rabl], :versions=>[:v1]}. Searched in:
+  * "/home/sai/SAI/client/huliogash/app/views"
+  * "/home/sai/.rvm/gems/ruby-2.2.4/bundler/gems/spree_auth_devise-4d1328c93fc5/lib/views/backend"
+  * "/home/sai/.rvm/gems/ruby-2.2.4/bundler/gems/spree_auth_devise-4d1328c93fc5/lib/views/frontend"
+  * "/home/sai/.rvm/gems/ruby-2.2.4/gems/devise-3.4.1/app/views"
+  * "/home/sai/.rvm/gems/ruby-2.2.4/bundler/gems/spree_gateway-59ac5bcacf94/lib/views/backend"
+  * "/home/sai/.rvm/gems/ruby-2.2.4/bundler/gems/spree_gateway-59ac5bcacf94/lib/views/frontend"
+  * "/home/sai/.rvm/gems/ruby-2.2.4/bundler/gems/spree-5546b0b19043/frontend/app/views"
+  * "/home/sai/.rvm/gems/ruby-2.2.4/bundler/gems/spree-5546b0b19043/backend/app/views"
+  * "/home/sai/.rvm/gems/ruby-2.2.4/bundler/gems/spree-5546b0b19043/api/app/views"
+  * "/home/sai/.rvm/gems/ruby-2.2.4/bundler/gems/spree-5546b0b19043/core/app/views"
+  * "/home/sai/.rvm/gems/ruby-2.2.4/gems/kaminari-0.16.3/app/views"
+
+[Rollbar] Exception not reported because Rollbar is disabled
+
+ActionView::Template::Error (Missing partial spree/shared/_translations with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder, :rabl], :versions=>[:v1]}. Searched in:
+  * "/home/sai/SAI/client/huliogash/app/views"
+  * "/home/sai/.rvm/gems/ruby-2.2.4/bundler/gems/spree_auth_devise-4d1328c93fc5/lib/views/backend"
+  * "/home/sai/.rvm/gems/ruby-2.2.4/bundler/gems/spree_auth_devise-4d1328c93fc5/lib/views/frontend"
+  * "/home/sai/.rvm/gems/ruby-2.2.4/gems/devise-3.4.1/app/views"
+  * "/home/sai/.rvm/gems/ruby-2.2.4/bundler/gems/spree_gateway-59ac5bcacf94/lib/views/backend"
+  * "/home/sai/.rvm/gems/ruby-2.2.4/bundler/gems/spree_gateway-59ac5bcacf94/lib/views/frontend"
+  * "/home/sai/.rvm/gems/ruby-2.2.4/bundler/gems/spree-5546b0b19043/frontend/app/views"
+  * "/home/sai/.rvm/gems/ruby-2.2.4/bundler/gems/spree-5546b0b19043/backend/app/views"
+  * "/home/sai/.rvm/gems/ruby-2.2.4/bundler/gems/spree-5546b0b19043/api/app/views"
+  * "/home/sai/.rvm/gems/ruby-2.2.4/bundler/gems/spree-5546b0b19043/core/app/views"
+  * "/home/sai/.rvm/gems/ruby-2.2.4/gems/kaminari-0.16.3/app/views"
+):
+    13:   <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6/html5shiv.min.js"></script>
+    14: <![endif]-->
+    15: <%= yield :head %>
+    16: <%= render 'spree/shared/translations' %>
+  app/views/spree/shared/_head.html.erb:16:in `_e6229fe123bf386ad0984ad9de896f40'
+  app/views/spree/layouts/spree_application.html.erb:8:in `_3043c48390035a6a3fbf7ccf784ecc94'
+
+
+  Rendered /home/sai/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.8ms)
+  Rendered /home/sai/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered /home/sai/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /home/sai/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (42.4ms)
+  Rendered /home/sai/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /home/sai/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/sai/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /home/sai/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.3ms)
+  Rendered /home/sai/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (32.9ms)
+  Rendered /home/sai/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/sai/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /home/sai/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (65.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-08-31 10:45:55 +0530
+Processing by Spree::HomeController#index as HTML
+  [1m[35mSpree::Order Exists (0.7ms)[0m  SELECT  1 AS one FROM "spree_orders" WHERE "spree_orders"."guest_token" = $1 LIMIT 1  [["guest_token", "bHGTJv779svww0q47S4iMA1472620555687"]]
+  [1m[36mSpree::Preference Load (0.4ms)[0m  [1mSELECT  "spree_preferences".* FROM "spree_preferences" WHERE "spree_preferences"."key" = $1 LIMIT 1[0m  [["key", "spree/frontend_configuration/locale"]]
+  [1m[35mSpree::Taxonomy Load (0.3ms)[0m  SELECT "spree_taxonomies".* FROM "spree_taxonomies"  ORDER BY spree_taxonomies.position, spree_taxonomies.created_at
+  [1m[36mSpree::Taxon Load (0.4ms)[0m  [1mSELECT "spree_taxons".* FROM "spree_taxons" WHERE "spree_taxons"."parent_id" IS NULL AND "spree_taxons"."taxonomy_id" IN (1, 2)[0m
+  [1m[35mSpree::Taxon Load (0.4ms)[0m  SELECT "spree_taxons".* FROM "spree_taxons" WHERE "spree_taxons"."parent_id" IN (1, 2)  ORDER BY "spree_taxons"."lft"
+  Rendered /home/sai/.rvm/gems/ruby-2.2.4/bundler/gems/spree-5546b0b19043/frontend/app/views/spree/shared/_taxonomies.html.erb (39.1ms)
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "spree_products" INNER JOIN "spree_variants" ON "spree_variants"."product_id" = "spree_products"."id" AND "spree_variants"."is_master" = $1 AND "spree_variants"."deleted_at" IS NULL INNER JOIN "spree_prices" ON "spree_prices"."variant_id" = "spree_variants"."id" AND "spree_prices"."deleted_at" IS NULL WHERE "spree_products"."deleted_at" IS NULL AND ("spree_products".deleted_at IS NULL or "spree_products".deleted_at >= '2016-08-31 05:15:55.693669') AND ("spree_products".available_on <= '2016-08-31 05:15:55.694278') AND (spree_prices.amount IS NOT NULL) AND "spree_prices"."currency" = 'USD' LIMIT 12 OFFSET 0) subquery_for_count[0m  [["is_master", "t"]]
+  [1m[35m (0.8ms)[0m  SELECT  MAX("spree_products"."updated_at") FROM "spree_products" INNER JOIN "spree_variants" ON "spree_variants"."product_id" = "spree_products"."id" AND "spree_variants"."is_master" = $1 AND "spree_variants"."deleted_at" IS NULL INNER JOIN "spree_prices" ON "spree_prices"."variant_id" = "spree_variants"."id" AND "spree_prices"."deleted_at" IS NULL WHERE "spree_products"."deleted_at" IS NULL AND ("spree_products".deleted_at IS NULL or "spree_products".deleted_at >= '2016-08-31 05:15:55.693669') AND ("spree_products".available_on <= '2016-08-31 05:15:55.694278') AND (spree_prices.amount IS NOT NULL) AND "spree_prices"."currency" = 'USD' LIMIT 12 OFFSET 0  [["is_master", "t"]]
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "spree_products" INNER JOIN "spree_variants" ON "spree_variants"."product_id" = "spree_products"."id" AND "spree_variants"."is_master" = $1 AND "spree_variants"."deleted_at" IS NULL INNER JOIN "spree_prices" ON "spree_prices"."variant_id" = "spree_variants"."id" AND "spree_prices"."deleted_at" IS NULL WHERE "spree_products"."deleted_at" IS NULL AND ("spree_products".deleted_at IS NULL or "spree_products".deleted_at >= '2016-08-31 05:15:55.693669') AND ("spree_products".available_on <= '2016-08-31 05:15:55.694278') AND (spree_prices.amount IS NOT NULL) AND "spree_prices"."currency" = 'USD'[0m  [["is_master", "t"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "spree_products" INNER JOIN "spree_variants" ON "spree_variants"."product_id" = "spree_products"."id" AND "spree_variants"."is_master" = $1 AND "spree_variants"."deleted_at" IS NULL INNER JOIN "spree_prices" ON "spree_prices"."variant_id" = "spree_variants"."id" AND "spree_prices"."deleted_at" IS NULL WHERE "spree_products"."deleted_at" IS NULL AND ("spree_products".deleted_at IS NULL or "spree_products".deleted_at >= '2016-08-31 05:15:55.693669') AND ("spree_products".available_on <= '2016-08-31 05:15:55.694278') AND (spree_prices.amount IS NOT NULL) AND "spree_prices"."currency" = 'USD' LIMIT 12 OFFSET 0) subquery_for_count  [["is_master", true]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "spree_products" INNER JOIN "spree_variants" ON "spree_variants"."product_id" = "spree_products"."id" AND "spree_variants"."is_master" = $1 AND "spree_variants"."deleted_at" IS NULL INNER JOIN "spree_prices" ON "spree_prices"."variant_id" = "spree_variants"."id" AND "spree_prices"."deleted_at" IS NULL WHERE "spree_products"."deleted_at" IS NULL AND ("spree_products".deleted_at IS NULL or "spree_products".deleted_at >= '2016-08-31 05:15:55.693669') AND ("spree_products".available_on <= '2016-08-31 05:15:55.694278') AND (spree_prices.amount IS NOT NULL) AND "spree_prices"."currency" = 'USD' LIMIT 12 OFFSET 0) subquery_for_count[0m  [["is_master", true]]
+  [1m[35mSpree::Product Load (1.0ms)[0m  SELECT  "spree_products".* FROM "spree_products" INNER JOIN "spree_variants" ON "spree_variants"."product_id" = "spree_products"."id" AND "spree_variants"."is_master" = $1 AND "spree_variants"."deleted_at" IS NULL INNER JOIN "spree_prices" ON "spree_prices"."variant_id" = "spree_variants"."id" AND "spree_prices"."deleted_at" IS NULL WHERE "spree_products"."deleted_at" IS NULL AND ("spree_products".deleted_at IS NULL or "spree_products".deleted_at >= '2016-08-31 05:15:55.693669') AND ("spree_products".available_on <= '2016-08-31 05:15:55.694278') AND (spree_prices.amount IS NOT NULL) AND "spree_prices"."currency" = 'USD' LIMIT 12 OFFSET 0  [["is_master", "t"]]
+  [1m[36mSpree::Variant Load (0.6ms)[0m  [1mSELECT "spree_variants".* FROM "spree_variants" WHERE "spree_variants"."deleted_at" IS NULL AND "spree_variants"."is_master" = $1 AND "spree_variants"."product_id" IN (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12)[0m  [["is_master", "t"]]
+  [1m[35mSpree::Price Load (0.4ms)[0m  SELECT "spree_prices".* FROM "spree_prices" WHERE "spree_prices"."deleted_at" IS NULL AND "spree_prices"."variant_id" IN (1, 2, 3, 4, 5, 7, 6, 12, 11, 10, 9, 8)
+  [1m[36mSpree::Image Load (0.6ms)[0m  [1mSELECT "spree_assets".* FROM "spree_assets" WHERE "spree_assets"."type" IN ('Spree::Image') AND "spree_assets"."viewable_type" = 'Spree::Variant' AND "spree_assets"."viewable_id" IN (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12)  ORDER BY "spree_assets"."position" ASC[0m
+  Rendered /home/sai/.rvm/gems/ruby-2.2.4/bundler/gems/spree-5546b0b19043/frontend/app/views/spree/shared/_products.html.erb (137.9ms)
+  Rendered spree/home/index.html.erb within spree/layouts/spree_application (196.3ms)
+  [1m[35mSpree::Store Load (0.4ms)[0m  SELECT  "spree_stores".* FROM "spree_stores" WHERE (url like '%localhost%')  ORDER BY "spree_stores"."id" ASC LIMIT 1
+  [1m[36mSpree::Store Load (0.3ms)[0m  [1mSELECT  "spree_stores".* FROM "spree_stores" WHERE "spree_stores"."default" = $1  ORDER BY "spree_stores"."id" ASC LIMIT 1[0m  [["default", "t"]]
+  Rendered spree/shared/_translations.html.erb (1.8ms)
+  Rendered spree/shared/_head.html.erb (109.1ms)
+  [1m[35mSpree::Tracker Load (0.4ms)[0m  SELECT  "spree_trackers".* FROM "spree_trackers" WHERE "spree_trackers"."active" = $1  ORDER BY "spree_trackers"."id" ASC LIMIT 1  [["active", "t"]]
+  Rendered /home/sai/.rvm/gems/ruby-2.2.4/bundler/gems/spree-5546b0b19043/frontend/app/views/spree/shared/_google_analytics.js.erb (6.8ms)
+[1;32mDeface:[0m 1 overrides found for 'spree/shared/_nav_bar'
+[1;32mDeface:[0m 'auth_shared_login_bar' matched 1 times with 'li#search-bar'
+[1;32mDeface: [ERROR][0m The original source for 'auth_shared_login_bar' has changed, this override should be reviewed to ensure it's still valid.
+  [1m[36m (1.3ms)[0m  [1mSELECT MAX("spree_taxons"."updated_at") FROM "spree_taxons" WHERE "spree_taxons"."parent_id" IS NULL[0m
+  [1m[35mSpree::Taxon Load (0.5ms)[0m  SELECT "spree_taxons".* FROM "spree_taxons" WHERE "spree_taxons"."parent_id" IS NULL  ORDER BY "spree_taxons"."lft"
+  Rendered /home/sai/.rvm/gems/ruby-2.2.4/bundler/gems/spree-5546b0b19043/frontend/app/views/spree/shared/_search.html.erb (15.1ms)
+  Rendered /home/sai/.rvm/gems/ruby-2.2.4/bundler/gems/spree-5546b0b19043/frontend/app/views/spree/shared/_nav_bar.html.erb (29.0ms)
+  Rendered /home/sai/.rvm/gems/ruby-2.2.4/bundler/gems/spree-5546b0b19043/frontend/app/views/spree/shared/_main_nav_bar.html.erb (4.7ms)
+  Rendered /home/sai/.rvm/gems/ruby-2.2.4/bundler/gems/spree-5546b0b19043/frontend/app/views/spree/shared/_header.html.erb (64.5ms)
+  Rendered /home/sai/.rvm/gems/ruby-2.2.4/bundler/gems/spree-5546b0b19043/frontend/app/views/spree/shared/_sidebar.html.erb (0.9ms)
+Completed 200 OK in 404ms (Views: 385.1ms | ActiveRecord: 11.1ms)
+
+
+Started GET "/cart_link" for 127.0.0.1 at 2016-08-31 10:45:56 +0530
+Processing by Spree::StoreController#cart_link as */*
+  [1m[36mSpree::Preference Load (0.5ms)[0m  [1mSELECT  "spree_preferences".* FROM "spree_preferences" WHERE "spree_preferences"."key" = $1 LIMIT 1[0m  [["key", "spree/frontend_configuration/locale"]]
+  [1m[35mSpree::Store Load (1.3ms)[0m  SELECT  "spree_stores".* FROM "spree_stores" WHERE (url like '%localhost%')  ORDER BY "spree_stores"."id" ASC LIMIT 1
+  [1m[36mSpree::Store Load (0.5ms)[0m  [1mSELECT  "spree_stores".* FROM "spree_stores" WHERE "spree_stores"."default" = $1  ORDER BY "spree_stores"."id" ASC LIMIT 1[0m  [["default", "t"]]
+  [1m[35mSpree::Order Load (0.5ms)[0m  SELECT  "spree_orders".* FROM "spree_orders" WHERE "spree_orders"."completed_at" IS NULL AND "spree_orders"."currency" = $1 AND "spree_orders"."guest_token" = $2 AND "spree_orders"."store_id" = $3 AND "spree_orders"."user_id" IS NULL LIMIT 1  [["currency", "USD"], ["guest_token", "bHGTJv779svww0q47S4iMA1472620555687"], ["store_id", 1]]
+  Rendered /home/sai/.rvm/gems/ruby-2.2.4/bundler/gems/spree-5546b0b19043/frontend/app/views/spree/shared/_link_to_cart.html.erb (56.3ms)
+  Couldn't find template for digesting: store/cart_link
+Completed 304 Not Modified in 133ms (Views: 116.7ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/products/ruby-on-rails-tote" for 127.0.0.1 at 2016-08-31 10:45:57 +0530
+Processing by Spree::ProductsController#show as HTML
+  Parameters: {"id"=>"ruby-on-rails-tote"}
+  [1m[36mSpree::Preference Load (0.3ms)[0m  [1mSELECT  "spree_preferences".* FROM "spree_preferences" WHERE "spree_preferences"."key" = $1 LIMIT 1[0m  [["key", "spree/frontend_configuration/locale"]]
+  [1m[35mSpree::Product Load (0.7ms)[0m  SELECT  "spree_products".* FROM "spree_products" INNER JOIN "spree_variants" ON "spree_variants"."product_id" = "spree_products"."id" AND "spree_variants"."is_master" = $1 AND "spree_variants"."deleted_at" IS NULL INNER JOIN "spree_prices" ON "spree_prices"."variant_id" = "spree_variants"."id" AND "spree_prices"."deleted_at" IS NULL WHERE "spree_products"."deleted_at" IS NULL AND ("spree_products".deleted_at IS NULL or "spree_products".deleted_at >= '2016-08-31 05:15:57.926092') AND ("spree_products".available_on <= '2016-08-31 05:15:57.926603') AND "spree_products"."slug" = $2  ORDER BY "spree_products"."id" ASC LIMIT 1  [["is_master", "t"], ["slug", "ruby-on-rails-tote"]]
+  [1m[36mSpree::Product Load (1.4ms)[0m  [1mSELECT "spree_products".* FROM "spree_products" INNER JOIN "spree_variants" ON "spree_variants"."product_id" = "spree_products"."id" AND "spree_variants"."is_master" = $1 AND "spree_variants"."deleted_at" IS NULL INNER JOIN "spree_prices" ON "spree_prices"."variant_id" = "spree_variants"."id" AND "spree_prices"."deleted_at" IS NULL WHERE "spree_products"."deleted_at" IS NULL AND ("spree_products".deleted_at IS NULL or "spree_products".deleted_at >= '2016-08-31 05:15:57.926092') AND ("spree_products".available_on <= '2016-08-31 05:15:57.926603')[0m  [["is_master", "t"]]
+  [1m[35mSpree::Variant Load (0.5ms)[0m  SELECT "spree_variants".* FROM "spree_variants" INNER JOIN "spree_prices" ON "spree_prices"."variant_id" = "spree_variants"."id" AND "spree_prices"."deleted_at" IS NULL WHERE "spree_variants"."deleted_at" IS NULL AND "spree_variants"."product_id" = $1 AND "spree_variants"."deleted_at" IS NULL AND "spree_prices"."currency" = 'USD' AND (spree_prices.amount IS NOT NULL)  ORDER BY "spree_variants".position ASC  [["product_id", 1]]
+  [1m[36mHABTM_OptionValues Load (29.5ms)[0m  [1mSELECT "spree_option_values_variants".* FROM "spree_option_values_variants" WHERE "spree_option_values_variants"."variant_id" IN (1)[0m
+  [1m[35mSpree::Image Load (1.1ms)[0m  SELECT "spree_assets".* FROM "spree_assets" WHERE "spree_assets"."type" IN ('Spree::Image') AND "spree_assets"."viewable_type" = 'Spree::Variant' AND "spree_assets"."viewable_id" IN (1)  ORDER BY "spree_assets"."position" ASC
+  [1m[36mSpree::ProductProperty Load (40.2ms)[0m  [1mSELECT "spree_product_properties".* FROM "spree_product_properties" WHERE "spree_product_properties"."product_id" = $1  ORDER BY spree_product_properties.position[0m  [["product_id", 1]]
+  [1m[35mSpree::Property Load (32.8ms)[0m  SELECT "spree_properties".* FROM "spree_properties" WHERE "spree_properties"."id" IN (9, 10, 11)
+  Rendered spree/products/show.html.erb within spree/layouts/spree_application (634.9ms)
+Completed 500 Internal Server Error in 714ms (ActiveRecord: 129.0ms)
+[Rollbar] Reporting exception: undefined local variable or method `cache_key_for_product' for #<#<Class:0x007fd5e4129c08>:0x007fd5d8d60c80>
+[Rollbar] Exception not reported because Rollbar is disabled
+
+ActionView::Template::Error (undefined local variable or method `cache_key_for_product' for #<#<Class:0x007fd5e4129c08>:0x007fd5d8d60c80>):
+    1: <% @body_id = 'product-details' %>
+    2: 
+    3: <% cache cache_key_for_product do %>
+    4:   <div data-hook="product_show" class="row" itemscope itemtype="https://schema.org/Product">
+    5:     <div class="col-md-4 col-sm-5" data-hook="product_left_part">
+    6:       <div data-hook="product_left_part_wrap">
+  app/views/spree/products/show.html.erb:3:in `_d0140e6a63cbac13abdf971dbff25f50'
+
+
+  Rendered /home/sai/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.0ms)
+  Rendered /home/sai/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.2ms)
+  Rendered /home/sai/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.7ms)
+  Rendered /home/sai/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (45.9ms)
+  Rendered /home/sai/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.8ms)
+  Rendered /home/sai/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /home/sai/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.9ms)
+  Rendered /home/sai/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.8ms)
+  Rendered /home/sai/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (33.6ms)
+  Rendered /home/sai/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.7ms)
+  Rendered /home/sai/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (51.7ms)
+  Rendered /home/sai/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (117.9ms)
+
+
+Started GET "/products/ruby-on-rails-ringer-t-shirt" for 127.0.0.1 at 2016-08-31 10:46:09 +0530
+Processing by Spree::ProductsController#show as HTML
+  Parameters: {"id"=>"ruby-on-rails-ringer-t-shirt"}
+  [1m[36mSpree::Preference Load (0.3ms)[0m  [1mSELECT  "spree_preferences".* FROM "spree_preferences" WHERE "spree_preferences"."key" = $1 LIMIT 1[0m  [["key", "spree/frontend_configuration/locale"]]
+  [1m[35mSpree::Product Load (1.3ms)[0m  SELECT  "spree_products".* FROM "spree_products" INNER JOIN "spree_variants" ON "spree_variants"."product_id" = "spree_products"."id" AND "spree_variants"."is_master" = $1 AND "spree_variants"."deleted_at" IS NULL INNER JOIN "spree_prices" ON "spree_prices"."variant_id" = "spree_variants"."id" AND "spree_prices"."deleted_at" IS NULL WHERE "spree_products"."deleted_at" IS NULL AND ("spree_products".deleted_at IS NULL or "spree_products".deleted_at >= '2016-08-31 05:16:09.921807') AND ("spree_products".available_on <= '2016-08-31 05:16:09.922288') AND "spree_products"."slug" = $2  ORDER BY "spree_products"."id" ASC LIMIT 1  [["is_master", "t"], ["slug", "ruby-on-rails-ringer-t-shirt"]]
+  [1m[36mSpree::Product Load (1.4ms)[0m  [1mSELECT "spree_products".* FROM "spree_products" INNER JOIN "spree_variants" ON "spree_variants"."product_id" = "spree_products"."id" AND "spree_variants"."is_master" = $1 AND "spree_variants"."deleted_at" IS NULL INNER JOIN "spree_prices" ON "spree_prices"."variant_id" = "spree_variants"."id" AND "spree_prices"."deleted_at" IS NULL WHERE "spree_products"."deleted_at" IS NULL AND ("spree_products".deleted_at IS NULL or "spree_products".deleted_at >= '2016-08-31 05:16:09.921807') AND ("spree_products".available_on <= '2016-08-31 05:16:09.922288')[0m  [["is_master", "t"]]
+  [1m[35mSpree::Variant Load (0.7ms)[0m  SELECT "spree_variants".* FROM "spree_variants" INNER JOIN "spree_prices" ON "spree_prices"."variant_id" = "spree_variants"."id" AND "spree_prices"."deleted_at" IS NULL WHERE "spree_variants"."deleted_at" IS NULL AND "spree_variants"."product_id" = $1 AND "spree_variants"."deleted_at" IS NULL AND "spree_prices"."currency" = 'USD' AND (spree_prices.amount IS NOT NULL)  ORDER BY "spree_variants".position ASC  [["product_id", 5]]
+  [1m[36mHABTM_OptionValues Load (0.3ms)[0m  [1mSELECT "spree_option_values_variants".* FROM "spree_option_values_variants" WHERE "spree_option_values_variants"."variant_id" IN (5)[0m
+  [1m[35mSpree::Image Load (1.0ms)[0m  SELECT "spree_assets".* FROM "spree_assets" WHERE "spree_assets"."type" IN ('Spree::Image') AND "spree_assets"."viewable_type" = 'Spree::Variant' AND "spree_assets"."viewable_id" IN (5)  ORDER BY "spree_assets"."position" ASC
+  [1m[36mSpree::ProductProperty Load (0.6ms)[0m  [1mSELECT "spree_product_properties".* FROM "spree_product_properties" WHERE "spree_product_properties"."product_id" = $1  ORDER BY spree_product_properties.position[0m  [["product_id", 5]]
+  [1m[35mSpree::Property Load (0.4ms)[0m  SELECT "spree_properties".* FROM "spree_properties" WHERE "spree_properties"."id" IN (1, 2, 3, 4, 5, 6, 7, 8)
+  Rendered spree/products/show.html.erb within spree/layouts/spree_application (503.3ms)
+Completed 500 Internal Server Error in 518ms (ActiveRecord: 6.0ms)
+[Rollbar] Reporting exception: undefined local variable or method `cache_key_for_product' for #<#<Class:0x007fd5e4129c08>:0x007fd5b0b08050>
+[Rollbar] Exception not reported because Rollbar is disabled
+
+ActionView::Template::Error (undefined local variable or method `cache_key_for_product' for #<#<Class:0x007fd5e4129c08>:0x007fd5b0b08050>):
+    1: <% @body_id = 'product-details' %>
+    2: 
+    3: <% cache cache_key_for_product do %>
+    4:   <div data-hook="product_show" class="row" itemscope itemtype="https://schema.org/Product">
+    5:     <div class="col-md-4 col-sm-5" data-hook="product_left_part">
+    6:       <div data-hook="product_left_part_wrap">
+  app/views/spree/products/show.html.erb:3:in `_d0140e6a63cbac13abdf971dbff25f50'
+
+
+  Rendered /home/sai/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.0ms)
+  Rendered /home/sai/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /home/sai/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/sai/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (39.0ms)
+  Rendered /home/sai/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.3ms)
+  Rendered /home/sai/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/sai/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /home/sai/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.3ms)
+  Rendered /home/sai/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (32.2ms)
+  Rendered /home/sai/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/sai/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /home/sai/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (65.2ms)
+
+
+Started GET "/products/ruby-on-rails-bag" for 127.0.0.1 at 2016-08-31 10:46:16 +0530
+Processing by Spree::ProductsController#show as HTML
+  Parameters: {"id"=>"ruby-on-rails-bag"}
+  [1m[36mSpree::Preference Load (0.3ms)[0m  [1mSELECT  "spree_preferences".* FROM "spree_preferences" WHERE "spree_preferences"."key" = $1 LIMIT 1[0m  [["key", "spree/frontend_configuration/locale"]]
+  [1m[35mSpree::Product Load (0.9ms)[0m  SELECT  "spree_products".* FROM "spree_products" INNER JOIN "spree_variants" ON "spree_variants"."product_id" = "spree_products"."id" AND "spree_variants"."is_master" = $1 AND "spree_variants"."deleted_at" IS NULL INNER JOIN "spree_prices" ON "spree_prices"."variant_id" = "spree_variants"."id" AND "spree_prices"."deleted_at" IS NULL WHERE "spree_products"."deleted_at" IS NULL AND ("spree_products".deleted_at IS NULL or "spree_products".deleted_at >= '2016-08-31 05:16:16.508115') AND ("spree_products".available_on <= '2016-08-31 05:16:16.509078') AND "spree_products"."slug" = $2  ORDER BY "spree_products"."id" ASC LIMIT 1  [["is_master", "t"], ["slug", "ruby-on-rails-bag"]]
+  [1m[36mSpree::Product Load (1.0ms)[0m  [1mSELECT "spree_products".* FROM "spree_products" INNER JOIN "spree_variants" ON "spree_variants"."product_id" = "spree_products"."id" AND "spree_variants"."is_master" = $1 AND "spree_variants"."deleted_at" IS NULL INNER JOIN "spree_prices" ON "spree_prices"."variant_id" = "spree_variants"."id" AND "spree_prices"."deleted_at" IS NULL WHERE "spree_products"."deleted_at" IS NULL AND ("spree_products".deleted_at IS NULL or "spree_products".deleted_at >= '2016-08-31 05:16:16.508115') AND ("spree_products".available_on <= '2016-08-31 05:16:16.509078')[0m  [["is_master", "t"]]
+  [1m[35mSpree::Variant Load (0.8ms)[0m  SELECT "spree_variants".* FROM "spree_variants" INNER JOIN "spree_prices" ON "spree_prices"."variant_id" = "spree_variants"."id" AND "spree_prices"."deleted_at" IS NULL WHERE "spree_variants"."deleted_at" IS NULL AND "spree_variants"."product_id" = $1 AND "spree_variants"."deleted_at" IS NULL AND "spree_prices"."currency" = 'USD' AND (spree_prices.amount IS NOT NULL)  ORDER BY "spree_variants".position ASC  [["product_id", 2]]
+  [1m[36mHABTM_OptionValues Load (0.4ms)[0m  [1mSELECT "spree_option_values_variants".* FROM "spree_option_values_variants" WHERE "spree_option_values_variants"."variant_id" IN (2)[0m
+  [1m[35mSpree::Image Load (0.7ms)[0m  SELECT "spree_assets".* FROM "spree_assets" WHERE "spree_assets"."type" IN ('Spree::Image') AND "spree_assets"."viewable_type" = 'Spree::Variant' AND "spree_assets"."viewable_id" IN (2)  ORDER BY "spree_assets"."position" ASC
+  [1m[36mSpree::ProductProperty Load (0.5ms)[0m  [1mSELECT "spree_product_properties".* FROM "spree_product_properties" WHERE "spree_product_properties"."product_id" = $1  ORDER BY spree_product_properties.position[0m  [["product_id", 2]]
+  [1m[35mSpree::Property Load (0.4ms)[0m  SELECT "spree_properties".* FROM "spree_properties" WHERE "spree_properties"."id" IN (9, 10, 11)
+  Rendered spree/products/show.html.erb within spree/layouts/spree_application (394.8ms)
+Completed 500 Internal Server Error in 410ms (ActiveRecord: 5.0ms)
+[Rollbar] Reporting exception: undefined local variable or method `cache_key_for_product' for #<#<Class:0x007fd5e4129c08>:0x0000000628bda0>
+[Rollbar] Exception not reported because Rollbar is disabled
+
+ActionView::Template::Error (undefined local variable or method `cache_key_for_product' for #<#<Class:0x007fd5e4129c08>:0x0000000628bda0>):
+    1: <% @body_id = 'product-details' %>
+    2: 
+    3: <% cache cache_key_for_product do %>
+    4:   <div data-hook="product_show" class="row" itemscope itemtype="https://schema.org/Product">
+    5:     <div class="col-md-4 col-sm-5" data-hook="product_left_part">
+    6:       <div data-hook="product_left_part_wrap">
+  app/views/spree/products/show.html.erb:3:in `_d0140e6a63cbac13abdf971dbff25f50'
+
+
+  Rendered /home/sai/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.4ms)
+  Rendered /home/sai/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.9ms)
+  Rendered /home/sai/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /home/sai/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (47.5ms)
+  Rendered /home/sai/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered /home/sai/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/sai/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.9ms)
+  Rendered /home/sai/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/sai/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (38.9ms)
+  Rendered /home/sai/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (1.3ms)
+  Rendered /home/sai/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.8ms)
+  Rendered /home/sai/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (75.0ms)
+
+
+Started GET "/products/ruby-on-rails-bag" for 127.0.0.1 at 2016-08-31 10:50:42 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Spree::ProductsController#show as HTML
+  Parameters: {"id"=>"ruby-on-rails-bag"}
+  [1m[35mSpree::Preference Load (0.4ms)[0m  SELECT  "spree_preferences".* FROM "spree_preferences" WHERE "spree_preferences"."key" = $1 LIMIT 1  [["key", "spree/frontend_configuration/locale"]]
+  [1m[36mSpree::Product Load (1.4ms)[0m  [1mSELECT  "spree_products".* FROM "spree_products" INNER JOIN "spree_variants" ON "spree_variants"."product_id" = "spree_products"."id" AND "spree_variants"."is_master" = $1 AND "spree_variants"."deleted_at" IS NULL INNER JOIN "spree_prices" ON "spree_prices"."variant_id" = "spree_variants"."id" AND "spree_prices"."deleted_at" IS NULL WHERE "spree_products"."deleted_at" IS NULL AND ("spree_products".deleted_at IS NULL or "spree_products".deleted_at >= '2016-08-31 05:20:43.039228') AND ("spree_products".available_on <= '2016-08-31 05:20:43.040315') AND "spree_products"."slug" = $2  ORDER BY "spree_products"."id" ASC LIMIT 1[0m  [["is_master", "t"], ["slug", "ruby-on-rails-bag"]]
+  [1m[35mSpree::PromotionRule Load (96.1ms)[0m  SELECT "spree_promotion_rules".* FROM "spree_promotion_rules" INNER JOIN "spree_products_promotion_rules" ON "spree_promotion_rules"."id" = "spree_products_promotion_rules"."promotion_rule_id" WHERE "spree_products_promotion_rules"."product_id" = $1  [["product_id", 2]]
+  [1m[36mSpree::Promotion Load (61.3ms)[0m  [1mSELECT "spree_promotions".* FROM "spree_promotions" WHERE "spree_promotions"."advertise" = $1 AND 1=0[0m  [["advertise", "t"]]
+  [1m[35mSpree::Variant Load (0.3ms)[0m  SELECT  "spree_variants".* FROM "spree_variants" WHERE "spree_variants"."deleted_at" IS NULL AND "spree_variants"."product_id" = $1 AND "spree_variants"."is_master" = $2 LIMIT 1  [["product_id", 2], ["is_master", "t"]]
+  [1m[36mSpree::Image Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "spree_assets" WHERE "spree_assets"."type" IN ('Spree::Image') AND "spree_assets"."viewable_id" = $1 AND "spree_assets"."viewable_type" = $2 AND "spree_assets"."type" IN ('Spree::Image') LIMIT 1[0m  [["viewable_id", 2], ["viewable_type", "Spree::Variant"]]
+  [1m[35mSpree::Image Load (0.3ms)[0m  SELECT  "spree_assets".* FROM "spree_assets" WHERE "spree_assets"."type" IN ('Spree::Image') AND "spree_assets"."viewable_id" = $1 AND "spree_assets"."viewable_type" = $2 AND "spree_assets"."type" IN ('Spree::Image')  ORDER BY "spree_assets"."position" ASC LIMIT 1  [["viewable_id", 2], ["viewable_type", "Spree::Variant"]]
+  Rendered /home/sai/.rvm/gems/ruby-2.2.4/bundler/gems/spree-5546b0b19043/frontend/app/views/spree/products/_image.html.erb (58.4ms)
+  [1m[36mSpree::Image Load (0.4ms)[0m  [1mSELECT "spree_assets".* FROM "spree_assets" WHERE "spree_assets"."type" IN ('Spree::Image') AND "spree_assets"."viewable_id" = $1 AND "spree_assets"."viewable_type" = $2 AND "spree_assets"."type" IN ('Spree::Image')  ORDER BY "spree_assets"."position" ASC[0m  [["viewable_id", 2], ["viewable_type", "Spree::Variant"]]
+  [1m[35mSpree::Image Load (0.7ms)[0m  SELECT "spree_assets".* FROM "spree_assets" INNER JOIN "spree_variants" ON "spree_assets"."viewable_id" = "spree_variants"."id" WHERE "spree_variants"."deleted_at" IS NULL AND "spree_assets"."type" IN ('Spree::Image') AND "spree_variants"."product_id" = $1 AND "spree_assets"."viewable_type" = $2 AND "spree_assets"."type" IN ('Spree::Image') AND "spree_assets"."type" IN ('Spree::Image')  ORDER BY "spree_assets"."position" ASC, "spree_variants".position ASC  [["product_id", 2], ["viewable_type", "Spree::Variant"]]
+  Rendered /home/sai/.rvm/gems/ruby-2.2.4/bundler/gems/spree-5546b0b19043/frontend/app/views/spree/products/_thumbnails.html.erb (11.2ms)
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "spree_product_properties" WHERE "spree_product_properties"."product_id" = $1[0m  [["product_id", 2]]
+  [1m[35mSpree::ProductProperty Load (0.2ms)[0m  SELECT "spree_product_properties".* FROM "spree_product_properties" WHERE "spree_product_properties"."product_id" = $1  ORDER BY spree_product_properties.position  [["product_id", 2]]
+  [1m[36mSpree::Property Load (0.4ms)[0m  [1mSELECT "spree_properties".* FROM "spree_properties" WHERE "spree_properties"."id" IN (9, 10, 11)[0m
+  Rendered /home/sai/.rvm/gems/ruby-2.2.4/bundler/gems/spree-5546b0b19043/frontend/app/views/spree/products/_properties.html.erb (39.2ms)
+  [1m[35mCACHE (0.1ms)[0m  SELECT "spree_promotions".* FROM "spree_promotions" WHERE "spree_promotions"."advertise" = $1 AND 1=0  [["advertise", true]]
+  Rendered /home/sai/.rvm/gems/ruby-2.2.4/bundler/gems/spree-5546b0b19043/frontend/app/views/spree/products/_promotions.html.erb (4.0ms)
+  [1m[36mSpree::Variant Load (0.5ms)[0m  [1mSELECT "spree_variants".* FROM "spree_variants" INNER JOIN "spree_prices" ON "spree_prices"."variant_id" = "spree_variants"."id" AND "spree_prices"."deleted_at" IS NULL WHERE "spree_variants"."deleted_at" IS NULL AND "spree_variants"."product_id" = $1 AND "spree_variants"."is_master" = $2 AND "spree_variants"."deleted_at" IS NULL AND "spree_prices"."currency" = 'USD' AND (spree_prices.amount IS NOT NULL)  ORDER BY "spree_variants".position ASC[0m  [["product_id", 2], ["is_master", "f"]]
+  [1m[35mSpree::Price Load (0.2ms)[0m  SELECT "spree_prices".* FROM "spree_prices" WHERE "spree_prices"."deleted_at" IS NULL AND "spree_prices"."variant_id" = $1  [["variant_id", 2]]
+  [1m[36mSpree::Price Load (0.3ms)[0m  [1mSELECT  "spree_prices".* FROM "spree_prices" WHERE "spree_prices"."variant_id" = $1 AND "spree_prices"."currency" = $2 LIMIT 1[0m  [["variant_id", 2], ["currency", "USD"]]
+  [1m[35m (35.1ms)[0m  SELECT SUM("spree_stock_items"."count_on_hand") FROM "spree_stock_items" INNER JOIN "spree_stock_locations" ON "spree_stock_locations"."id" = "spree_stock_items"."stock_location_id" WHERE "spree_stock_items"."deleted_at" IS NULL AND "spree_stock_items"."variant_id" = 2 AND "spree_stock_locations"."active" = 't'
+  Rendered /home/sai/.rvm/gems/ruby-2.2.4/bundler/gems/spree-5546b0b19043/frontend/app/views/spree/products/_cart_form.html.erb (122.2ms)
+  [1m[36mSpree::Taxon Load (46.6ms)[0m  [1mSELECT "spree_taxons".* FROM "spree_taxons" INNER JOIN "spree_products_taxons" ON "spree_taxons"."id" = "spree_products_taxons"."taxon_id" WHERE "spree_products_taxons"."product_id" = $1[0m  [["product_id", 2]]
+  Rendered /home/sai/.rvm/gems/ruby-2.2.4/bundler/gems/spree-5546b0b19043/frontend/app/views/spree/products/_taxons.html.erb (137.9ms)
+  Rendered /home/sai/.rvm/gems/ruby-2.2.4/bundler/gems/spree-5546b0b19043/frontend/app/views/spree/products/show.html.erb within spree/layouts/spree_application (627.1ms)
+  [1m[35mSpree::Store Load (0.7ms)[0m  SELECT  "spree_stores".* FROM "spree_stores" WHERE (url like '%localhost%')  ORDER BY "spree_stores"."id" ASC LIMIT 1
+  [1m[36mSpree::Store Load (0.3ms)[0m  [1mSELECT  "spree_stores".* FROM "spree_stores" WHERE "spree_stores"."default" = $1  ORDER BY "spree_stores"."id" ASC LIMIT 1[0m  [["default", "t"]]
+  Rendered spree/shared/_translations.html.erb (1.1ms)
+  Rendered spree/shared/_head.html.erb (1519.6ms)
+  [1m[35mSpree::Tracker Load (0.5ms)[0m  SELECT  "spree_trackers".* FROM "spree_trackers" WHERE "spree_trackers"."active" = $1  ORDER BY "spree_trackers"."id" ASC LIMIT 1  [["active", "t"]]
+  Rendered /home/sai/.rvm/gems/ruby-2.2.4/bundler/gems/spree-5546b0b19043/frontend/app/views/spree/shared/_google_analytics.js.erb (10.7ms)
+[1;32mDeface:[0m 1 overrides found for 'spree/shared/_nav_bar'
+[1;32mDeface:[0m 'auth_shared_login_bar' matched 1 times with 'li#search-bar'
+[1;32mDeface: [ERROR][0m The original source for 'auth_shared_login_bar' has changed, this override should be reviewed to ensure it's still valid.
+  [1m[36m (0.6ms)[0m  [1mSELECT MAX("spree_taxons"."updated_at") FROM "spree_taxons" WHERE "spree_taxons"."parent_id" IS NULL[0m
+  [1m[35mSpree::Taxon Load (0.4ms)[0m  SELECT "spree_taxons".* FROM "spree_taxons" WHERE "spree_taxons"."parent_id" IS NULL  ORDER BY "spree_taxons"."lft"
+  Rendered /home/sai/.rvm/gems/ruby-2.2.4/bundler/gems/spree-5546b0b19043/frontend/app/views/spree/shared/_search.html.erb (17.6ms)
+  Rendered /home/sai/.rvm/gems/ruby-2.2.4/bundler/gems/spree-5546b0b19043/frontend/app/views/spree/shared/_nav_bar.html.erb (32.3ms)
+  Rendered /home/sai/.rvm/gems/ruby-2.2.4/bundler/gems/spree-5546b0b19043/frontend/app/views/spree/shared/_main_nav_bar.html.erb (6.8ms)
+  Rendered /home/sai/.rvm/gems/ruby-2.2.4/bundler/gems/spree-5546b0b19043/frontend/app/views/spree/shared/_header.html.erb (82.1ms)
+Completed 200 OK in 2466ms (Views: 1993.3ms | ActiveRecord: 297.7ms)
+
+
+Started GET "/cart_link" for 127.0.0.1 at 2016-08-31 10:50:45 +0530
+Processing by Spree::StoreController#cart_link as */*
+  [1m[36mSpree::Preference Load (0.3ms)[0m  [1mSELECT  "spree_preferences".* FROM "spree_preferences" WHERE "spree_preferences"."key" = $1 LIMIT 1[0m  [["key", "spree/frontend_configuration/locale"]]
+  [1m[35mSpree::Store Load (0.4ms)[0m  SELECT  "spree_stores".* FROM "spree_stores" WHERE (url like '%localhost%')  ORDER BY "spree_stores"."id" ASC LIMIT 1
+  [1m[36mSpree::Store Load (0.3ms)[0m  [1mSELECT  "spree_stores".* FROM "spree_stores" WHERE "spree_stores"."default" = $1  ORDER BY "spree_stores"."id" ASC LIMIT 1[0m  [["default", "t"]]
+  [1m[35mSpree::Order Load (0.8ms)[0m  SELECT  "spree_orders".* FROM "spree_orders" WHERE "spree_orders"."completed_at" IS NULL AND "spree_orders"."currency" = $1 AND "spree_orders"."guest_token" = $2 AND "spree_orders"."store_id" = $3 AND "spree_orders"."user_id" IS NULL LIMIT 1  [["currency", "USD"], ["guest_token", "bHGTJv779svww0q47S4iMA1472620555687"], ["store_id", 1]]
+  Rendered /home/sai/.rvm/gems/ruby-2.2.4/bundler/gems/spree-5546b0b19043/frontend/app/views/spree/shared/_link_to_cart.html.erb (106.2ms)
+  Couldn't find template for digesting: store/cart_link
+Completed 304 Not Modified in 185ms (Views: 164.7ms | ActiveRecord: 4.7ms)
